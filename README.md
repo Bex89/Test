@@ -54,15 +54,19 @@ A powerful, production-ready Android system utility designed specifically for Me
 ### ⚙️ Settings
 - **Theme Switching**: Light, Dark, or System default themes
 - **Refresh Intervals**: Configurable update rates (1s, 2s, 5s)
-- **About Section**: App version and developer information
+- **About Dialog**: Comprehensive app information with version and features
+- **Instant Theme Application**: Theme changes apply immediately
 
 ## 🎨 Design Highlights
 
 - **Material Design 3**: Modern, polished UI following Material You guidelines
 - **VR-Optimized**: Large text, high contrast, and touch-friendly controls perfect for headset use
 - **Dark Theme Default**: Easier on eyes in VR environments
-- **Smooth Animations**: 60 FPS performance with fluid transitions
+- **Smooth Animations**: 60 FPS performance with fluid fragment transitions
+- **Splash Screen**: Professional app launch experience with animated icon
 - **Landscape Orientation**: Optimized for Meta Quest 3 viewing
+- **7 Dedicated Screens**: Dashboard, Apps, Storage, Battery, Network, System, Settings
+- **Bottom Navigation**: Quick access to all monitoring features
 
 ## 🛠️ Technical Stack
 

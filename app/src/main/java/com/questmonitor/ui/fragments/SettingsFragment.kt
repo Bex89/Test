@@ -6,9 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.button.MaterialButton
+import com.questmonitor.BuildConfig
 import com.questmonitor.R
 import com.questmonitor.utils.PreferencesManager
 import com.questmonitor.viewmodels.SettingsViewModel
@@ -18,6 +22,7 @@ class SettingsFragment : Fragment() {
     private lateinit var viewModel: SettingsViewModel
     private lateinit var radioTheme: RadioGroup
     private lateinit var radioRefresh: RadioGroup
+    private lateinit var btnAbout: MaterialButton
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,6 +45,7 @@ class SettingsFragment : Fragment() {
     private fun initViews(view: View) {
         radioTheme = view.findViewById(R.id.radio_theme)
         radioRefresh = view.findViewById(R.id.radio_refresh)
+        btnAbout = view.findViewById(R.id.btn_about)
     }
 
     private fun setupObservers() {
@@ -91,5 +97,30 @@ class SettingsFragment : Fragment() {
             }
             viewModel.setRefreshInterval(interval)
         }
+
+        btnAbout.setOnClickListener {
+            showAboutDialog()
+        }
+    }
+
+    /**
+     * Show about dialog with app information
+     */
+    private fun showAboutDialog() {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_about, null)
+
+        // Set version from BuildConfig
+        val versionText = dialogView.findViewById<TextView>(R.id.version_text)
+        versionText.text = "Version ${BuildConfig.VERSION_NAME}"
+
+        val dialog = AlertDialog.Builder(requireContext())
+            .setView(dialogView)
+            .create()
+
+        dialogView.findViewById<MaterialButton>(R.id.btn_close).setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 }

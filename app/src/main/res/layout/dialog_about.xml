@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_large">
+
+    <ImageView
+        android:layout_width="@dimen/icon_size_xl"
+        android:layout_height="@dimen/icon_size_xl"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="App Icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.QuestMonitor.Headline"
+        android:layout_marginTop="@dimen/spacing_medium" />
+
+    <TextView
+        android:id="@+id/version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Version 1.0.0"
+        android:textAppearance="@style/TextAppearance.QuestMonitor.Body"
+        android:layout_marginTop="@dimen/spacing_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/settings_developer"
+        android:textAppearance="@style/TextAppearance.QuestMonitor.Label"
+        android:layout_marginTop="@dimen/spacing_large" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_description"
+        android:textAppearance="@style/TextAppearance.QuestMonitor.Body"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/spacing_small" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quest Monitor is an open-source system monitoring tool designed specifically for Meta Quest 3. It provides real-time monitoring of CPU, memory, storage, battery, and network with a beautiful Material Design 3 interface optimized for VR viewing."
+        android:textAppearance="@style/TextAppearance.QuestMonitor.Body"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/spacing_medium" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Features:\n• Real-time system monitoring\n• App management\n• Storage analysis\n• Battery insights\n• Network information\n• Dark/Light themes\n• VR-optimized UI"
+        android:textAppearance="@style/TextAppearance.QuestMonitor.Body"
+        android:layout_marginTop="@dimen/spacing_medium" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Licensed under MIT License\n© 2024 Quest Monitor"
+        android:textAppearance="@style/TextAppearance.QuestMonitor.Label"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/spacing_large" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/common_close"
+        android:layout_marginTop="@dimen/spacing_large" />
+</LinearLayout>

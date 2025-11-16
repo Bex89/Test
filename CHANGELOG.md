@@ -13,19 +13,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **App Manager** to view and stop running applications
 - **Storage Analyzer** with visual breakdown of space usage
 - **Battery Insights** with health, temperature, and voltage information
+- **Network Monitor** with WiFi details, signal strength, and IP information
 - **System Information** screen showing device details and specifications
 - **Settings** with theme switching (Light/Dark/System)
 - **Configurable refresh intervals** (1s, 2s, 5s)
+- **Splash Screen** with animated icon for professional app launch
+- **About Dialog** with comprehensive app information and features list
+- **Fragment Animations** with smooth slide transitions between screens
 - **Material Design 3** UI with adaptive color scheme
 - **VR-optimized interface** with large text and touch targets
 - **Dark theme as default** for comfortable VR viewing
 - **Quick Actions** for memory cleaning and optimization
 - **Swipe-to-refresh** on all data screens
-- **Bottom navigation** for easy screen switching
+- **Bottom navigation** with 7 screens for easy access
 - **Auto-refresh** capability for live monitoring
 - **DataStore** for persistent user preferences
 - **MVVM architecture** with ViewModels and Repositories
 - **Kotlin Coroutines** for efficient async operations
+- **Custom CircularProgressView** for beautiful data visualization
 
 ### Technical Details
 - Minimum SDK: API 29 (Android 10)

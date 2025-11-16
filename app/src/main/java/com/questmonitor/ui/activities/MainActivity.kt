@@ -3,6 +3,7 @@ package com.questmonitor.ui.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -22,6 +23,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var preferencesManager: PreferencesManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Install splash screen before super.onCreate()
+        installSplashScreen()
+
         super.onCreate(savedInstanceState)
 
         // Apply theme before setContentView
@@ -83,6 +87,14 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(BatteryFragment())
                     true
                 }
+                R.id.nav_network -> {
+                    loadFragment(NetworkFragment())
+                    true
+                }
+                R.id.nav_system -> {
+                    loadFragment(SystemFragment())
+                    true
+                }
                 R.id.nav_settings -> {
                     loadFragment(SettingsFragment())
                     true
@@ -93,10 +105,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Load fragment into container
+     * Load fragment into container with slide animations
      */
     private fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
+            .setCustomAnimations(
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
             .replace(R.id.fragment_container, fragment)
             .commit()
     }
