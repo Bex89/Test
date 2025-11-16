@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium">
+
+            <!-- Quick Stats Grid -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!-- CPU Card -->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.QuestMonitor.CardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/spacing_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dashboard_cpu"
+                            android:textAppearance="@style/TextAppearance.QuestMonitor.Label"
+                            android:textColor="?attr/colorOnSurface" />
+
+                        <com.questmonitor.ui.views.CircularProgressView
+                            android:id="@+id/cpu_progress"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="@dimen/spacing_small" />
+
+                        <TextView
+                            android:id="@+id/cpu_cores"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 Cores"
+                            android:textAppearance="@style/TextAppearance.QuestMonitor.Body"
+                            android:layout_marginTop="@dimen/spacing_small" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Memory Card -->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.QuestMonitor.CardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/spacing_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dashboard_memory"
+                            android:textAppearance="@style/TextAppearance.QuestMonitor.Label"
+                            android:textColor="?attr/colorOnSurface" />
+
+                        <com.questmonitor.ui.views.CircularProgressView
+                            android:id="@+id/memory_progress"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="@dimen/spacing_small" />
+
+                        <TextView
+                            android:id="@+id/memory_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 GB / 8 GB"
+                            android:textAppearance="@style/TextAppearance.QuestMonitor.Body"
+                            android:layout_marginTop="@dimen/spacing_small" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/spacing_small">
+
+                <!-- Storage Card -->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.QuestMonitor.CardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/spacing_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dashboard_storage"
+                            android:textAppearance="@style/TextAppearance.QuestMonitor.Label"
+                            android:textColor="?attr/colorOnSurface" />
+
+                        <com.questmonitor.ui.views.CircularProgressView
+                            android:id="@+id/storage_progress"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="@dimen/spacing_small" />
+
+                        <TextView
+                            android:id="@+id/storage_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="32 GB / 128 GB"
+                            android:textAppearance="@style/TextAppearance.QuestMonitor.Body"
+                            android:layout_marginTop="@dimen/spacing_small" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Battery Card -->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.QuestMonitor.CardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/spacing_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="@dimen/spacing_medium">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dashboard_battery"
+                            android:textAppearance="@style/TextAppearance.QuestMonitor.Label"
+                            android:textColor="?attr/colorOnSurface" />
+
+                        <com.questmonitor.ui.views.CircularProgressView
+                            android:id="@+id/battery_progress"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="@dimen/spacing_small" />
+
+                        <TextView
+                            android:id="@+id/battery_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30°C"
+                            android:textAppearance="@style/TextAppearance.QuestMonitor.Body"
+                            android:layout_marginTop="@dimen/spacing_small" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Quick Actions -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.QuestMonitor.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dashboard_quick_actions"
+                        android:textAppearance="@style/TextAppearance.QuestMonitor.Title"
+                        android:textColor="?attr/colorOnSurface" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_clean_memory"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/button_height"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/spacing_small"
+                            android:text="@string/dashboard_clean_memory"
+                            android:textSize="@dimen/text_size_body" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_optimize"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/button_height"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:text="@string/dashboard_optimize"
+                            android:textSize="@dimen/text_size_body"
+                            style="@style/Widget.Material3.Button.TonalButton" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

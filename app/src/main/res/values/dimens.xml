@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+
+    <!-- Card -->
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+
+    <!-- Text Sizes (VR Optimized - Larger for readability) -->
+    <dimen name="text_size_headline">28sp</dimen>
+    <dimen name="text_size_title">22sp</dimen>
+    <dimen name="text_size_subtitle">20sp</dimen>
+    <dimen name="text_size_body">18sp</dimen>
+    <dimen name="text_size_label">16sp</dimen>
+    <dimen name="text_size_caption">14sp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_small">24dp</dimen>
+    <dimen name="icon_size_medium">32dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="icon_size_xl">64dp</dimen>
+
+    <!-- Touch Targets (VR Optimized) -->
+    <dimen name="touch_target_min">56dp</dimen>
+    <dimen name="button_height">56dp</dimen>
+
+    <!-- Chart -->
+    <dimen name="chart_height">200dp</dimen>
+    <dimen name="chart_stroke_width">3dp</dimen>
+</resources>

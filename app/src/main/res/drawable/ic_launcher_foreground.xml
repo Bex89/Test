@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Monitor/Display icon representing system monitoring -->
+    <group
+        android:translateX="27"
+        android:translateY="27">
+
+        <!-- Screen/Monitor -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M8,4 L46,4 C48.21,4 50,5.79 50,8 L50,38 C50,40.21 48.21,42 46,42 L8,42 C5.79,42 4,40.21 4,38 L4,8 C4,5.79 5.79,4 8,4 Z" />
+
+        <!-- CPU Icon (small chip) -->
+        <path
+            android:fillColor="#0061A4"
+            android:pathData="M15,15 L23,15 L23,23 L15,23 Z" />
+
+        <!-- Memory bars -->
+        <path
+            android:fillColor="#0061A4"
+            android:pathData="M27,15 L30,15 L30,23 L27,23 Z M32,15 L35,15 L35,23 L32,23 Z M37,15 L40,15 L40,23 L37,23 Z" />
+
+        <!-- Battery indicator -->
+        <path
+            android:fillColor="#4CAF50"
+            android:pathData="M15,27 L25,27 L25,33 L15,33 Z M25,29 L27,29 L27,31 L25,31 Z" />
+
+        <!-- Storage icon -->
+        <path
+            android:fillColor="#0061A4"
+            android:pathData="M30,27 L40,27 L40,30 L30,30 Z M30,31 L40,31 L40,33 L30,33 Z" />
+
+        <!-- Stand base -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M20,42 L34,42 L34,46 L32,46 L32,50 L22,50 L22,46 L20,46 Z" />
+    </group>
+</vector>

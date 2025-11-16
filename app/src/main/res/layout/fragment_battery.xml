@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_medium">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.QuestMonitor.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium"
+                    android:gravity="center">
+
+                    <com.questmonitor.ui.views.CircularProgressView
+                        android:id="@+id/battery_progress"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp" />
+
+                    <TextView
+                        android:id="@+id/battery_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Charging"
+                        android:textAppearance="@style/TextAppearance.QuestMonitor.Title"
+                        android:layout_marginTop="@dimen/spacing_medium" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Battery Details -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.QuestMonitor.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <include layout="@layout/item_info_row"
+                        android:id="@+id/row_health" />
+                    <include layout="@layout/item_info_row"
+                        android:id="@+id/row_temperature" />
+                    <include layout="@layout/item_info_row"
+                        android:id="@+id/row_voltage" />
+                    <include layout="@layout/item_info_row"
+                        android:id="@+id/row_technology" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
